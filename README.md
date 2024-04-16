@@ -99,7 +99,7 @@ Evaluation for VSOD results:
 
 ### Visualization
 
-![](/home/fendoujia/Desktop/uvos_vis.jpg)
+![](./asset/uvos_vis.jpg)
 
 ### Demo
 
