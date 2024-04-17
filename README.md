@@ -1,9 +1,12 @@
 # Learning Motion and Temporal Cues for Unsupervised Video Object Segmentation(Under Review)
 
+This repo contains the code for our paper "*Learning Motion and Temporal Cues for Unsupervised Video Object Segmentation*" by Yunzhi Zhuge, Hongyu Gu, Lu Zhang, Jinqing Qi, and Huchuan Lu. 
+
 **Abstract:** *In this paper, we address the challenges in unsupervised video object segmentation (UVOS) by proposing an efficient algorithm, termed MTNet, which concurrently exploits motion and temporal cues. Unlike previous methods that either merely inherit appearance with motion or model temporal relations, our method combines both aspects by integrating them within a unified framework. MTNet is devised by effectively merging appearance and motion features during the feature extraction process within encoders, promoting a more complementary representation. To capture the intricate long-range contextual dynamics and information embedded within videos, a temporal transformer module is introduced, facilitating efficacious inter-frame interactions throughout a video clip. Finally, a series of decoders are cascaded across all feature levels, aiming to thoroughly harness their potential in producing increasingly precise segmentation masks. As a result, MTNet provides a strong and compact framework that explores both temporal and cross-modality knowledge to robustly localize and track the primary object accurately in various challenging scenarios efficiently. Extensive experiments across diverse benchmarks conclusively show that our method not only attains state-of-the-art performance in unsupervised video object segmentation but also delivers competitive results in video salient object detection. 
 These findings highlight the method's robust versatility and its adeptness in adapting to a range of segmentation tasks.*
 
-> Thanks for your interest in this work. Our paper is still under review, now this repository contains only test code, we will release full code after our paper accepted. 
+> [!NOTE] 
+> Thanks for your interest in this work. Our paper is still under review, now this repository contains only test code, we will release full code after the paper is published. 
 
 ## Demo
 <img src="asset/libby.gif" alt="demo1"/> <img src="asset/horsejump-high.gif" alt="demo2"/> <img src="asset/rat.gif" alt="demo2"/>
@@ -81,6 +84,8 @@ python test.py --test_model ./saves/mtnet.pth --task_name VSOD --test_dataset DA
 [Precomputed outputs - Google Drive](https://drive.google.com/drive/folders/1N2EInUd4prt87HGme5QoXnz5AdmhQtZH?usp=sharing)
 
 [Precomputed outputs - Baidu Disk](https://drive.google.com/drive/folders/1V4wslwiGaFHwq09k019tXU1HpG-kODnZ?usp=sharing)
+
+
 
 ### Evaluation
 
