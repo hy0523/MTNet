@@ -8,8 +8,7 @@ These findings highlight the method's robust versatility and its adeptness in ad
 > Thanks for your interest in this work. Our paper is still under review, now this repository contains only test code, we will release full code after our paper accepted. 
 
 ## Demo
-
-<img src="asset/blackswan.gif" alt="demo" style="zoom:80%;" />
+<img src="asset/blackswan.gif" alt="demo1" style="zoom:33%;" /> <img src="asset/blackswan.gif" alt="demo1" style="zoom:33%;" /> <img src="asset/blackswan.gif" alt="demo1" style="zoom:33%;" />
 
 ## Get Started
 
@@ -57,7 +56,7 @@ Waiting
 
 ### Testing
 
-Download trained [MTNet](), and placing it in the `./saves`
+Download the trained [MTNet](), and placing it in the `./saves`
 
 ```
 python test.py [test_model] [task_name] [test_dataset] [output_dir]
@@ -68,9 +67,6 @@ Testing for UVOS task:
 ```shell
 # Example
 python test.py --test_model ./saves/mtnet.pth --task_name UVOS --test_dataset DAVIS16 --output_dir output
-python test.py --test_model ./saves/mtnet.pth --task_name UVOS --test_dataset YO2SEG --output_dir output
-python test.py --test_model ./saves/mtnet.pth --task_name UVOS --test_dataset FBMS-59 --output_dir output
-python test.py --test_model ./saves/mtnet.pth --task_name UVOS --test_dataset LongVideos --output_dir output
 ```
 
 Testing for VSOD task:
@@ -78,9 +74,6 @@ Testing for VSOD task:
 ```shell
 # Example
 python test.py --test_model ./saves/mtnet.pth --task_name VSOD --test_dataset DAVIS16 --output_dir output
-python test.py --test_model ./saves/mtnet.pth --task_name VSOD --test_dataset ViSal --output_dir output
-python test.py --test_model ./saves/mtnet.pth --task_name VSOD --test_dataset SegTrack-V2 --output_dir output
-python test.py --test_model ./saves/mtnet.pth --task_name VSOD --test_dataset DAVSOD --output_dir output
 ```
 
 ### Results
@@ -88,11 +81,6 @@ python test.py --test_model ./saves/mtnet.pth --task_name VSOD --test_dataset DA
 [Precomputed outputs - Google Drive](https://drive.google.com/drive/folders/1V4wslwiGaFHwq09k019tXU1HpG-kODnZ?usp=sharing)
 
 [Precomputed outputs - Baidu Disk](https://drive.google.com/drive/folders/1V4wslwiGaFHwq09k019tXU1HpG-kODnZ?usp=sharing)
-
-|      | P            | DAVIS16 | YouTube-Objects | FBMS-59 | LongVideos | ViSal | SegTrack-V2 | DAVSOD |
-| :--: | ------------ | :-----: | :-------------: | :-----: | :--------: | :---: | :---------: | :----: |
-| UVOS | uvos_results |         |                 |         |            |   -   |      -      |   -    |
-| VSOD |              |         |        -        |    -    |     -      |       |             |        |
 
 ### Evaluation
 
@@ -104,6 +92,11 @@ python test_scripts/test_for_davis.py --gt_path ../data/DAVIS16/val/mask --resul
 ```
 
 Evaluation for VSOD results:
+
+```python
+# Example
+python test_scripts/test_vsod/main.py --method MTNet --dataset DAVIS16 --gt_dir test_scripts/test_vsod/gt/ --pred_dir test_scripts/test_vsod/results/
+```
 
 ### Visualization
 
