@@ -85,9 +85,9 @@ python test.py --test_model ./saves/mtnet.pth --task_name VSOD --test_dataset DA
 
 ### Results
 
-**[[Precomputed outputs - Google Drive]](https://drive.google.com/drive/folders/1V4wslwiGaFHwq09k019tXU1HpG-kODnZ?usp=sharing)**
+[Precomputed outputs - Google Drive](https://drive.google.com/drive/folders/1V4wslwiGaFHwq09k019tXU1HpG-kODnZ?usp=sharing)
 
-**[[Precomputed outputs - Baidu Disk]](https://drive.google.com/drive/folders/1V4wslwiGaFHwq09k019tXU1HpG-kODnZ?usp=sharing)**
+[Precomputed outputs - Baidu Disk](https://drive.google.com/drive/folders/1V4wslwiGaFHwq09k019tXU1HpG-kODnZ?usp=sharing)
 
 |      | P            | DAVIS16 | YouTube-Objects | FBMS-59 | LongVideos | ViSal | SegTrack-V2 | DAVSOD |
 | :--: | ------------ | :-----: | :-------------: | :-----: | :--------: | :---: | :---------: | :----: |
@@ -109,6 +109,3 @@ Evaluation for VSOD results:
 
 ![](./asset/uvos_vis.jpg)
 
-### Demo
-
-Waiting
