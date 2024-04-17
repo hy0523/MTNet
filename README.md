@@ -8,7 +8,7 @@ These findings highlight the method's robust versatility and its adeptness in ad
 > Thanks for your interest in this work. Our paper is still under review, now this repository contains only test code, we will release full code after our paper accepted. 
 
 ## Demo
-<img src="asset/blackswan.gif" alt="demo1" style="zoom:33%;" /> <img src="asset/blackswan.gif" alt="demo1" style="zoom:33%;" /> <img src="asset/blackswan.gif" alt="demo1" style="zoom:33%;" />
+<img src="asset/dance-twirl.gif" alt="demo1"/>  
 
 ## Get Started
 
