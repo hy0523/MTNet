@@ -114,6 +114,8 @@ This repository owes its existence to the exceptional contributions of other pro
 * STCN: https://github.com/hkchengrex/STCN
 * AOT: https://github.com/yoxu515/aot-benchmark
 * HFAN: https://github.com/NUST-Machine-Intelligence-Laboratory/HFAN
+* FSNet: https://github.com/GewelsJI/FSNet
+* AMCNet: https://github.com/isyangshu/AMC-Net
 * DAVSOD: https://github.com/DengPingFan/DAVSOD
 
 Many thanks to their invaluable contributions.
