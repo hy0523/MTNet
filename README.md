@@ -8,7 +8,7 @@ These findings highlight the method's robust versatility and its adeptness in ad
 > Thanks for your interest in this work. Our paper is still under review, now this repository contains only test code, we will release full code after our paper accepted. 
 
 ## Demo
-<img src="asset/libby.gif" alt="demo1"/> <img src="asset/breakdance.gif" alt="demo2"/> <img src="asset/horsejump-high.gif" alt="demo2"/>
+<img src="asset/libby.gif" alt="demo1"/> <img src="asset/horsejump-high.gif" alt="demo2"/> <img src="asset/rat.gif" alt="demo2"/>
 
 ## Get Started
 
@@ -105,4 +105,6 @@ python test_scripts/test_vsod/main.py --method MTNet --dataset DAVIS16 --gt_dir 
 ### Visualization
 
 ![](./asset/uvos_vis.jpg)
+
+## References
 
