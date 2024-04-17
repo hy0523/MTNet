@@ -8,7 +8,7 @@ These findings highlight the method's robust versatility and its adeptness in ad
 > Thanks for your interest in this work. Our paper is still under review, now this repository contains only test code, we will release full code after our paper accepted. 
 
 ## Demo
-<img src="asset/dance-twirl.gif" alt="demo1"/>  
+<img src="asset/libby.gif" alt="demo1"/> <img src="asset/breakdance.gif" alt="demo2"/> <img src="asset/horsejump-high.gif" alt="demo2"/>
 
 ## Get Started
 
@@ -66,6 +66,7 @@ Testing for UVOS task:
 
 ```shell
 # Example
+# ['DAVIS16', 'YO2SEG', 'FBMS-59', 'LongVideos']
 python test.py --test_model ./saves/mtnet.pth --task_name UVOS --test_dataset DAVIS16 --output_dir output
 ```
 
@@ -73,6 +74,7 @@ Testing for VSOD task:
 
 ```shell
 # Example
+# ['DAVIS16','Easy-35','FBMS-59', 'MCL', 'ViSal', 'SegTrack-V2']
 python test.py --test_model ./saves/mtnet.pth --task_name VSOD --test_dataset DAVIS16 --output_dir output
 ```
 
@@ -81,6 +83,8 @@ python test.py --test_model ./saves/mtnet.pth --task_name VSOD --test_dataset DA
 [Precomputed outputs - Google Drive](https://drive.google.com/drive/folders/1V4wslwiGaFHwq09k019tXU1HpG-kODnZ?usp=sharing)
 
 [Precomputed outputs - Baidu Disk](https://drive.google.com/drive/folders/1V4wslwiGaFHwq09k019tXU1HpG-kODnZ?usp=sharing)
+
+
 
 ### Evaluation
 
