@@ -1,7 +1,7 @@
 # Learning Motion and Temporal Cues for Unsupervised Video Object Segmentation(Under Review)
 
 > [!NOTE] 
-> Thanks for your interest in this work. Our paper is still under review, now this repository contains test code only, and we will release full code after the paper is published. 
+> Thank you for your interest in our work. Currently, our paper is under review, and this repository contains only the test code. We are actively working to prepare the complete codebase, which will include both training and testing phases. We will release the full code soon.
 
 ## Demo
 <img src="asset/libby.gif" alt="demo1"/> <img src="asset/horsejump-high.gif" alt="demo2"/> <img src="asset/rat.gif" alt="demo2"/>
