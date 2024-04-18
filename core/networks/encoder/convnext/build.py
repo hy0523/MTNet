@@ -1,4 +1,4 @@
-from .convnext import convnext_nano, convnext_tiny, convnext_small
+from .convnext import convnext_tiny, convnext_small
 import timm
 
 

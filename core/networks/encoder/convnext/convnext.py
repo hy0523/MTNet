@@ -211,30 +211,24 @@ def convnext_nano(**kwargs):
 
 
 def convnext_tiny(**kwargs):
-    # convnext_tiny: 0.4
     model = ConvNeXt(depths=[3, 3, 9, 3], dims=[96, 192, 384, 768], out_indices=[0, 1, 2, 3],
                      drop_path_rate=0.4, layer_scale_init_value=1.0, **kwargs)
-    # url = model_urls['convnext_tiny_1k']
-    # checkpoint = torch.hub.load_state_dict_from_url(url=url, map_location="cpu", check_hash=True)
-    # model.load_state_dict(checkpoint["model"], strict=False)
-    checkpoint = torch.load('pretrain_models/convnext_tiny_1k_224_ema.pth')
+    url = model_urls['convnext_tiny_1k']
+    checkpoint = torch.hub.load_state_dict_from_url(url=url, map_location="cpu", check_hash=True)
     model.load_state_dict(checkpoint["model"], strict=False)
     return model
 
 
 def convnext_small(**kwargs):
-    # convnext_small: 0.3
     model = ConvNeXt(depths=[3, 3, 27, 3], dims=[96, 192, 384, 768], out_indices=[0, 1, 2, 3],
                      drop_path_rate=0.3, layer_scale_init_value=1.0, **kwargs)
-    # url = model_urls['convnext_small_1k']
-    # checkpoint = torch.hub.load_state_dict_from_url(url=url, map_location="cpu", check_hash=True)
-    checkpoint = torch.load('pretrain_models/convnext_small_1k_224_ema.pth')
+    url = model_urls['convnext_small_1k']
+    checkpoint = torch.hub.load_state_dict_from_url(url=url, map_location="cpu", check_hash=True)
     model.load_state_dict(checkpoint["model"], strict=False)
     return model
 
 
 def convnext_base(**kwargs):
-    # convnext_base: 0.4
     model = ConvNeXt(depths=[3, 3, 27, 3], dims=[128, 256, 512, 1024], out_indices=[0, 1, 2, 3],
                      drop_path_rate=0.4, layer_scale_init_value=1.0, **kwargs)
     url = model_urls['convnext_base_1k']
