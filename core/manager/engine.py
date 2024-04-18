@@ -77,9 +77,6 @@ class MTNetEngine():
         # This method only load model parameter and should be used to fine-tuning
         checkpoint = torch.load(path, map_location="cpu")
         new_param = checkpoint['network']
-        # from IPython import embed
-        # embed()
-        # new_checkpoint = {'network':checkpoint['network']}
         try:
             self.vos_model.load_state_dict(new_param)
         except RuntimeError:  # 1GPU loads mGPU model
