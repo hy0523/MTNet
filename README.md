@@ -40,14 +40,14 @@ VSOD datasets:
 - SegTrack-V2: [SegTrack-V2](https://github.com/DengPingFan/DAVSOD)
 - ViSal: [ViSal](https://github.com/DengPingFan/DAVSOD)
 
-To quickly reproduce our results, we upload the processed data to [Google Drive](https://drive.google.com/drive/folders/1yt4dGuLuhFKpED8TzYr_iWwLrtduMykA?usp=sharing) and [Baidu Disk]().
+To quickly reproduce our results, we upload the processed data to [Google Drive](https://drive.google.com/drive/folders/1yt4dGuLuhFKpED8TzYr_iWwLrtduMykA?usp=sharing) and [Baidu Disk](https://pan.baidu.com/s/1NkIYp5oJPrPKG8dZLyyBZg)(code: qcbh).
 
 ### Models
 
 |    stage    |                          model link                          |
 | :---------: | :----------------------------------------------------------: |
-|  pre-train  | [Google Drive](https://drive.google.com/drive/folders/1S9St0aRP826Gt9VXPbk9mHGRloNcjpzy?usp=sharing), [Baidu Disk]() |
-| fine-tuning | [Google Drive](https://drive.google.com/drive/folders/1S9St0aRP826Gt9VXPbk9mHGRloNcjpzy?usp=sharing), [Baidu Disk]() |
+|  pre-train  | [Google Drive](https://drive.google.com/drive/folders/1S9St0aRP826Gt9VXPbk9mHGRloNcjpzy?usp=sharing), [Baidu Disk](https://pan.baidu.com/s/1NkIYp5oJPrPKG8dZLyyBZg)(code: qcbh) |
+| fine-tuning | [Google Drive](https://drive.google.com/drive/folders/1S9St0aRP826Gt9VXPbk9mHGRloNcjpzy?usp=sharing), [Baidu Disk](https://pan.baidu.com/s/1NkIYp5oJPrPKG8dZLyyBZg)(code: qcbh) |
 
 To reproduct the results we reported in paper, please download the corresponding models and run test script.
 
@@ -83,9 +83,7 @@ python test.py --test_model ./saves/mtnet.pth --task_name VSOD --test_dataset DA
 
 [Precomputed outputs - Google Drive](https://drive.google.com/drive/folders/1N2EInUd4prt87HGme5QoXnz5AdmhQtZH?usp=sharing)
 
-[Precomputed outputs - Baidu Disk](https://drive.google.com/drive/folders/1V4wslwiGaFHwq09k019tXU1HpG-kODnZ?usp=sharing)
-
-
+[Precomputed outputs - Baidu Disk](https://pan.baidu.com/s/1NkIYp5oJPrPKG8dZLyyBZg)(code: qcbh)
 
 ### Evaluation
 
