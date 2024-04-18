@@ -103,6 +103,12 @@ python test_scripts/test_vsod/main.py --method MTNet --dataset DAVIS16 --gt_dir 
 
 ### Visualization
 
+Specify the dataset in `visualize.py`
+
+```python
+python visualize.py
+```
+
 ![](./asset/uvos_vis.jpg)
 
 ## References
