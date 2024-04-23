@@ -52,7 +52,7 @@ Waiting
 
 ### Testing
 
-Download the trained MTNet, and placing it in the `./saves`
+Download the trained MTNet, and placing it in the `./saves` or anywhere.
 
 ```
 python test.py [test_model] [task_name] [test_dataset] [output_dir]
@@ -61,16 +61,12 @@ python test.py [test_model] [task_name] [test_dataset] [output_dir]
 Testing for UVOS task:
 
 ```shell
-# Example
-# ['DAVIS16', 'YO2SEG', 'FBMS-59', 'LongVideos']
 python test.py --test_model ./saves/mtnet.pth --task_name UVOS --test_dataset DAVIS16 --output_dir output
 ```
 
 Testing for VSOD task:
 
 ```shell
-# Example
-# ['DAVIS16','Easy-35','FBMS-59', 'MCL', 'ViSal', 'SegTrack-V2']
 python test.py --test_model ./saves/mtnet.pth --task_name VSOD --test_dataset DAVIS16 --output_dir output
 ```
 
@@ -85,14 +81,12 @@ python test.py --test_model ./saves/mtnet.pth --task_name VSOD --test_dataset DA
 Evaluation for UVOS results:
 
 ```shell
-# Example
 python test_scripts/test_for_davis.py --gt_path ../data/DAVIS16/val/mask --result_path output/MTNet/UVOS/DAVIS16/
 ```
 
 Evaluation for VSOD results:
 
 ```python
-# Example
 python test_scripts/test_vsod/main.py --method MTNet --dataset DAVIS16 --gt_dir test_scripts/test_vsod/gt/ --pred_dir test_scripts/test_vsod/results/
 ```
 
