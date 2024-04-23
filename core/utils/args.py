@@ -102,6 +102,9 @@ class Configuration():
         parser.add_argument('--test_size', default=(512, 512))
         parser.add_argument('--output_dir', default='output')
         parser.add_argument('--benchmark', default=True)
+        # Visualize
+        parser.add_argument('--vis_dataset', type=list, default=['DAVIS16'])
+
         if unknown_arg_ok:
             args, _ = parser.parse_known_args()
             self.args = vars(args)

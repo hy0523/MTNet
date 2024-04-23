@@ -43,7 +43,7 @@ class Visualizer:
                 dataset_img_root = None
             print(f"Processing {dataset_name} datasets... ")
             dataset_pred_root = os.path.join(pred_root, dataset_name)
-            dataset_save_root = os.path.join(save_root, config['test_model'], dataset_name)
+            dataset_save_root = os.path.join(save_root, config['model_name'], dataset_name)
             videos = sorted(os.listdir(dataset_img_root))
             for _, video in enumerate(tqdm(videos)):
                 video_img_path = os.path.join(dataset_img_root, video)
@@ -74,11 +74,10 @@ class Visualizer:
                     video_dir = os.path.join(video_save_path, video_name + '.mp4')  # avi mp4
                     video_maker = VideoMaker(frames_dir=video_save_path,
                                              out_dir=video_dir,
-                                             fps=30,
+                                             fps=20,
                                              img_size=img_size)
                     video_maker.make_video()
                     video_maker.release()
-
 
     def apply_mask(self, image, mask, color, alpha=0.5):
         # mask = F
