@@ -94,7 +94,7 @@ python test_scripts/test_for_davis.py --gt_path ../data/DAVIS16/val/mask --resul
 
 Evaluation for VSOD results:
 
-```python
+```shell
 python test_scripts/test_vsod/main.py --method MTNet --dataset DAVIS16 --gt_dir test_scripts/test_vsod/gt/ --pred_dir test_scripts/test_vsod/results/
 ```
 

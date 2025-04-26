@@ -34,6 +34,4 @@ CUDA_VISIBLE_DEVICES=${GPU_ID} python -m torch.distributed.launch --nproc_per_no
 --encoder_name ${encoder_name} \
 --train_frames ${train_frames} \
 --clip_length ${clip_length} \
---pretrain_model_path ${pretrain_model_path} \
---max_iter ${max_iter} \
---eval_iter ${eval_iter}
+--pretrain_model_path ${pretrain_model_path}
