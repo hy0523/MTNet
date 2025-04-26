@@ -126,8 +126,8 @@ class Configuration():
             self.args['batch_size'] = none_or_default(self.args['batch_size'], 2)
             self.args['max_iter'] = none_or_default(self.args['max_iter'], 10000)
             self.args['save_checkpoint_interval'] = none_or_default(self.args['save_checkpoint_interval'],
-                                                                    100)
-            self.args['eval_iter'] = none_or_default(self.args['eval_iter'], 100)
+                                                                    1000)
+            self.args['eval_iter'] = none_or_default(self.args['eval_iter'], 1000)
         else:
             raise NotImplementedError
         # Encoder

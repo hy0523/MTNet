@@ -1,10 +1,12 @@
-# Learning Motion and Temporal Cues for Unsupervised Video Object Segmentation(Under Review)
+# [TNNLS2024]Learning Motion and Temporal Cues for Unsupervised Video Object Segmentation
 
-> [!NOTE] 
-> Thank you for your interest in our work. Currently, our paper is under review, and this repository contains only the test code. We are actively working to prepare the complete codebase, which will include both training and testing phases. We will release the full code soon.
+## Updates
+- [2025-04-26] The training code is now available.
+- [2024-06-20] Our paper is accepted at TNNLS 2024.
+- [2024-04-16] Initialize the repository, release the test code and the trained model.
 
 ## Demo
-<img src="asset/libby.gif" alt="demo1"/> <img src="asset/horsejump-high.gif" alt="demo2"/> <img src="asset/rat.gif" alt="demo2"/>
+<img src="./asset/libby.gif" alt="demo1"/> <img src="asset/horsejump-high.gif" alt="demo2"/> <img src="asset/rat.gif" alt="demo2"/>
 
 ## Get Started
 
@@ -35,24 +37,30 @@ VSOD datasets:
 - SegTrack-V2: [SegTrack-V2](https://github.com/DengPingFan/DAVSOD)
 - ViSal: [ViSal](https://github.com/DengPingFan/DAVSOD)
 
-To quickly reproduce our results, we upload the processed data to [Google Drive](https://drive.google.com/drive/folders/1yt4dGuLuhFKpED8TzYr_iWwLrtduMykA?usp=sharing) and [Baidu Disk](https://pan.baidu.com/s/1NkIYp5oJPrPKG8dZLyyBZg)(code: qcbh).
+To quickly reproduce our results, we upload the processed data to [Google Drive](https://drive.google.com/drive/folders/1yt4dGuLuhFKpED8TzYr_iWwLrtduMykA?usp=sharing) and [Baidu Disk](https://pan.baidu.com/s/1NkIYp5oJPrPKG8dZLyyBZg) (code: qcbh).
 
 ### Models
 
 |    stage    |                          model link                          |
 | :---------: | :----------------------------------------------------------: |
-|  pre-train  | [Google Drive](https://drive.google.com/drive/folders/1S9St0aRP826Gt9VXPbk9mHGRloNcjpzy?usp=sharing), [Baidu Disk](https://pan.baidu.com/s/1NkIYp5oJPrPKG8dZLyyBZg)(code: qcbh) |
-| fine-tuning | [Google Drive](https://drive.google.com/drive/folders/1S9St0aRP826Gt9VXPbk9mHGRloNcjpzy?usp=sharing), [Baidu Disk](https://pan.baidu.com/s/1NkIYp5oJPrPKG8dZLyyBZg)(code: qcbh) |
+|  pre-train  | [Google Drive](https://drive.google.com/drive/folders/1S9St0aRP826Gt9VXPbk9mHGRloNcjpzy?usp=sharing), [Baidu Disk](https://pan.baidu.com/s/1NkIYp5oJPrPKG8dZLyyBZg) (code: qcbh) |
+| fine-tuning | [Google Drive](https://drive.google.com/drive/folders/1S9St0aRP826Gt9VXPbk9mHGRloNcjpzy?usp=sharing), [Baidu Disk](https://pan.baidu.com/s/1NkIYp5oJPrPKG8dZLyyBZg) (code: qcbh) |
 
 To reproduct the results we reported in paper, please download the corresponding models and run test script.
 
 ### Training
-
-Waiting
+Distributed Training.
+```shell
+sh train_m.sh
+```
+Single-GPU Training.
+```shell
+sh train_s.sh
+```
 
 ### Testing
 
-Download the trained MTNet, and placing it in the `./saves` or anywhere.
+Download the trained MTNet, and placing it in the `./saves`.
 
 ```
 python test.py [test_model] [task_name] [test_dataset] [output_dir]
@@ -72,9 +80,9 @@ python test.py --test_model ./saves/mtnet.pth --task_name VSOD --test_dataset DA
 
 ### Results
 
-[Precomputed outputs - Google Drive](https://drive.google.com/drive/folders/1N2EInUd4prt87HGme5QoXnz5AdmhQtZH?usp=sharing)
+[Google Drive](https://drive.google.com/drive/folders/1N2EInUd4prt87HGme5QoXnz5AdmhQtZH?usp=sharing)
 
-[Precomputed outputs - Baidu Disk](https://pan.baidu.com/s/1NkIYp5oJPrPKG8dZLyyBZg)(code: qcbh)
+[Baidu Disk](https://pan.baidu.com/s/1NkIYp5oJPrPKG8dZLyyBZg) (code: qcbh)
 
 ### Evaluation
 
@@ -94,7 +102,7 @@ python test_scripts/test_vsod/main.py --method MTNet --dataset DAVIS16 --gt_dir 
 
 Specify the dataset in `visualize.py`, then run:
 
-```python
+```shell
 python visualize.py
 ```
 
@@ -113,3 +121,13 @@ This repository owes its existence to the exceptional contributions of other pro
 
 Many thanks to their invaluable contributions.
 
+## BibTeX
+```bibtex
+@article{zhuge2024learning,
+  title={Learning Motion and Temporal Cues for Unsupervised Video Object Segmentation},
+  author={Zhuge, Yunzhi and Gu, Hongyu and Zhang, Lu and Qi, Jinqing and Lu, Huchuan},
+  journal={IEEE Transactions on Neural Networks and Learning Systems},
+  year={2024},
+  publisher={IEEE}
+}
+```
