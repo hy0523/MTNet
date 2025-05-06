@@ -7,7 +7,7 @@ import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader
 import importlib
-from core.manager.engine import CLIPVOSEngine
+from core.manager.engine import MTNetEngine
 from core.dataloader.video_vos_dataset import VOSDataset
 from core.dataloader.davis_test_dataset import DAVISTestDataset
 import math
@@ -34,13 +34,13 @@ class Trainer(object):
             self.scaler = None
         engine_config = importlib.import_module('core.networks.' + config['model_name'])
         if config['distributed']:
-            model = engine_config.CLIPVOS(config).cuda(local_rank)
+            model = engine_config.MTNet(config).cuda(local_rank)
             model = torch.nn.SyncBatchNorm.convert_sync_batchnorm(model).cuda(local_rank)
             model = torch.nn.parallel.DistributedDataParallel(model,
                                                               device_ids=[local_rank],
                                                               output_device=local_rank)
         else:
-            model = engine_config.CLIPVOS(config).cuda()
+            model = engine_config.MTNet(config).cuda()
 
         if config['distributed']:
             backbone_params = list(map(id, model.module.backbone.parameters()))
@@ -54,7 +54,7 @@ class Trainer(object):
             {'params': backbone_params, 'lr': config['lr']},
             {'params': other_params, 'lr': config['lr']}
         ], lr=config['lr'], weight_decay=config['adamw_weight_decay'])
-        self.engine = CLIPVOSEngine(model, optimizer, config)
+        self.engine = MTNetEngine(model, optimizer, config)
         self.criterion = nn.BCEWithLogitsLoss()
 
     def prepare_dataset(self):
